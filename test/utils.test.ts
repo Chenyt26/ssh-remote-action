@@ -53,7 +53,7 @@ test('check inputs', () => {
   expect(utils.checkInputs(inputs3)).toEqual(false)
   expect(utils.checkInputs(inputs4)).toEqual(false)
 })
-
+ */
 test('check commands danger', () => {
   let commands1: string[] = [
     'ps -ef | grep java',
@@ -66,4 +66,3 @@ test('check commands danger', () => {
   expect(utils.checkCommandsDanger(commands2)).toEqual(true)
   expect(utils.checkCommandsDanger(commands3)).toEqual(true)
 })
- */
