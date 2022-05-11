@@ -58,8 +58,8 @@ export function checkParameterIsNull(parameter: string): boolean {
  */
 export function checkCommandsDanger(commands: string[]): boolean {
   let isCommandsDanger = false
-  for (let i = 0 ; i < commands.length; i ++ ) {
-//    console.log("**** command " + commands[i]) ;
+  for (let i = 0; i < commands.length; i++) {
+    //    console.log("**** command " + commands[i]) ;
     if (checkCommandDanger(commands[i])) {
       isCommandsDanger = true
       break
@@ -76,13 +76,13 @@ export function checkCommandsDanger(commands: string[]): boolean {
 export function checkCommandDanger(command: string): boolean {
   let isCommandDanger = false
   const dangerCommandSet = context.dangerCommandSet
-  for (let i = 0 ; i < dangerCommandSet.length ; i ++ ) {
+  for (let i = 0; i < dangerCommandSet.length; i++) {
     // console.log("************** danCommand " + dangerCommandSet[i])
     // console.log("************** checkCommand " + command)
     if (command.includes(dangerCommandSet[i])) {
       core.info(
         'find danger operation "' +
-        dangerCommandSet[i] +
+          dangerCommandSet[i] +
           '" in command line "' +
           command +
           '",please remove it '
